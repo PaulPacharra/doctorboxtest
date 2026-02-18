@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoctorBox - Anleitungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DOCTOR BOX</h1>
+        <p>Anleitungen für Testkits</p>
+    </header>
+
+    <main>
+        <section class="anleitungen">
+            <h2>Anleitungen</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('sti-pro')">STI Pro</button>
+                <button class="tab-btn" onclick="showTab('sti-std')">STI Standard</button>
+                <button class="tab-btn" onclick="showTab('sti-basic')">STI Basic</button>
+                <button class="tab-btn" onclick="showTab('sti-essential')">STI Essential</button>
+                <button class="tab-btn" onclick="showTab('darmkrebs')">Darmkrebsvorsorge</button>
+            </div>
+
+            <!-- STI Pro -->
+            <div id="sti-pro" class="tab-content active">
+                <h3>STI Pro</h3>
+                
+                <div class="gender-tabs">
+                    <button class="gender-tab-btn active" onclick="showGenderTab('sti-pro', 'male')">👨 Männer</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('sti-pro', 'female')">� Frauen</button>
+                </div>
+
+                <div id="sti-pro-male" class="gender-content active">
+                    <div class="section">
+                        <h4>📦 Komponenten für Männer</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (STP)</li>
+                            <li>1x Urinbecher</li>
+                            <li>1x Urin Set</li>
+                            <li>1x Grünes Anleitungsheft</li>
+                            <li>1x Blutentnahmeset
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>3x Lanzetten</li>
+                                    <li>2x Pflaster</li>
+                                    <li>2x Alkoholtupfer</li>
+                                    <li>1x Wundkompresse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sti-pro-female" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten für Frauen</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (VPR)</li>
+                            <li>1x Vaginalabstrich</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Beiges Anleitungsheft</li>
+                            <li>1x Blutentnahmeset
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>3x Lanzetten</li>
+                                    <li>2x Pflaster</li>
+                                    <li>2x Alkoholtupfer</li>
+                                    <li>1x Wundkompresse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STI Standard -->
+            <div id="sti-std" class="tab-content">
+                <h3>STI Standard</h3>
+                
+                <div class="gender-tabs">
+                    <button class="gender-tab-btn active" onclick="showGenderTab('sti-std', 'male')">👨 Männer</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('sti-std', 'female')">👩 Frauen</button>
+                </div>
+
+                <div id="sti-std-male" class="gender-content active">
+                    <div class="section">
+                        <h4>📦 Komponenten für Männer</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (STS)</li>
+                            <li>1x Urinbecher</li>
+                            <li>1x Urin Set</li>
+                            <li>1x Grünes Anleitungsheft</li>
+                            <li>1x Blutentnahmeset
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>3x Lanzetten</li>
+                                    <li>2x Pflaster</li>
+                                    <li>2x Alkoholtupfer</li>
+                                    <li>1x Wundkompresse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sti-std-female" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten für Frauen</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (VST)</li>
+                            <li>1x Vaginalabstrich</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Beiges Anleitungsheft</li>
+                            <li>1x Blutentnahmeset
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>3x Lanzetten</li>
+                                    <li>2x Pflaster</li>
+                                    <li>2x Alkoholtupfer</li>
+                                    <li>1x Wundkompresse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STI Basic -->
+            <div id="sti-basic" class="tab-content">
+                <h3>STI Basic</h3>
+                
+                <div class="gender-tabs">
+                    <button class="gender-tab-btn active" onclick="showGenderTab('sti-basic', 'urin')">💧 Urin</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('sti-basic', 'vaginal')">👩 Vaginal</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('sti-basic', 'rektal')">🔴 Rektal</button>
+                </div>
+
+                <div id="sti-basic-urin" class="gender-content active">
+                    <div class="section">
+                        <h4>📦 Komponenten - Urin</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (STB)</li>
+                            <li>1x Urinbecher</li>
+                            <li>1x Urin Set</li>
+                            <li>1x Grünes Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sti-basic-vaginal" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten - Vaginal</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (VBA)</li>
+                            <li>1x Vaginalabstrich</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Beiges Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sti-basic-rektal" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten - Rektal</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (RBA)</li>
+                            <li>1x Rektalabstrich</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Rötliches Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STI Essential -->
+            <div id="sti-essential" class="tab-content">
+                <h3>STI Essential</h3>
+                
+                <div class="gender-tabs">
+                    <button class="gender-tab-btn active" onclick="showGenderTab('sti-essential', 'male')">👨 Männer</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('sti-essential', 'female')">👩 Frauen</button>
+                </div>
+
+                <div id="sti-essential-male" class="gender-content active">
+                    <div class="section">
+                        <h4>📦 Komponenten für Männer</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (STE)</li>
+                            <li>1x Urinbecher</li>
+                            <li>1x Urin Set</li>
+                            <li>1x Grünes Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sti-essential-female" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten für Frauen</h4>
+                        <ul>
+                            <li>1x Versandbeutel (Labor Krone)</li>
+                            <li>1x Blauer Beutel</li>
+                            <li>1x Barcodekarte (VES)</li>
+                            <li>1x Vaginalabstrich</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Beiges Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Darmkrebsvorsorge -->
+            <div id="darmkrebs" class="tab-content">
+                <h3>Darmkrebsvorsorge Test</h3>
+                
+                <div class="gender-tabs">
+                    <button class="gender-tab-btn active" onclick="showGenderTab('darmkrebs', 'gwq')">GWQ</button>
+                    <button class="gender-tab-btn" onclick="showGenderTab('darmkrebs', 'kkh')">KKH</button>
+                </div>
+
+                <div id="darmkrebs-gwq" class="gender-content active">
+                    <div class="section">
+                        <h4>📦 Komponenten</h4>
+                        <ul>
+                            <li>1x Blauer Beutel mit Saugeinlage</li>
+                            <li>1x Versandbeutel (Labor Becker)</li>
+                            <li>1x Stuhlauffanghilfe</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Röhrchen</li>
+                            <li>1x Barcodekarte</li>
+                            <li>1x GWQ Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="darmkrebs-kkh" class="gender-content">
+                    <div class="section">
+                        <h4>📦 Komponenten</h4>
+                        <ul>
+                            <li>1x Blauer Beutel mit Saugeinlage</li>
+                            <li>1x Versandbeutel (Labor Becker)</li>
+                            <li>1x Stuhlauffanghilfe</li>
+                            <li>1x Handschuh</li>
+                            <li>1x Röhrchen</li>
+                            <li>1x KKH Anleitungsheft</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
